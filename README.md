@@ -2,10 +2,10 @@
 Create a password hacker using brute force and dictionary-based brute force.
 
 ## How to use
-- Run [hacker.py](https://github.com/qilinz/Password-Hacker/hacker.py) with arguments of which server to connect. e.g. `python hacker.py localhost 8080`
+- Run [hacker.py](https://github.com/qilinz/Password-Hacker/blob/main/hacker.py) with arguments of which server to connect. e.g. `python hacker.py localhost 8080`
 
 ## How the program works
-1. Find the correct username using [logins.txt](https://github.com/qilinz/Password-Hacker/logins.txt).
+1. Find the correct username using [logins.txt](https://github.com/qilinz/Password-Hacker/blob/main/logins.txt).
    1. If username is correct, the response info will be "Wrong password".
    2. If username is wrong, the response info will be "Wrong login"
 2. Find the correct password through brute force. 
@@ -35,7 +35,7 @@ def brute_force():
 ```
 The outer loop tests all possible length of passwords. Once the length is decided, an iterator is created using `itertools.product()`. The inner loop tests all the possible combination in the iterator, changing a list of characters to a string.
 ### Dictionary-based brute force
-In this method, a dictionary of the most common passwords included in [passwords.txt](https://github.com/qilinz/Password-Hacker/passwords.txt) is used.
+In this method, a dictionary of the most common passwords included in [passwords.txt](https://github.com/qilinz/Password-Hacker/blob/main/passwords.txt) is used.
 
 Passwords in the dictionary are checked one by one with different combinations of lowercase and uppercase. 
 ```
